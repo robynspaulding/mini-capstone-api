@@ -9,6 +9,21 @@
 Product.create(
   name: "Mason Jar",
   price: 2,
-  image_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpPWBJmVpypqJMkVHRLNisyszvzQrYsuPAtZXtDClYwyo4IogZnVwcAtN8JlxELdTw7Sw&usqp=CAU",
+  image_url: ,
   description: "A medium size glass jar with metal lid, great for storing food or liquid and using as a cup!",
+  )
+
+  Product.create(
+  name: "Coffee Mug",
+  price: 5,
+  image_url: ,
+  description: "White coffee mug with wide handle.",
+  )
+
+
+  Product.create(
+  name: "Coaster",
+  price: 1,
+  image_url: ,
+  description: "square drink coaster with a photo of a waterfall.",
   )

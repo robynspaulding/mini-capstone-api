@@ -1,7 +1,9 @@
 class ProductsController < ApplicationController
 
   def all_products
-    render json: { message: "hi"} 
+    products = Product.all
+
+    render products.as_json
 
   end
 end
