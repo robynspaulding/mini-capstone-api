@@ -7,8 +7,8 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 Product.create(
-  name: "Mason Jar"
-  price: 2.98
-  image_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpPWBJmVpypqJMkVHRLNisyszvzQrYsuPAtZXtDClYwyo4IogZnVwcAtN8JlxELdTw7Sw&usqp=CAU"
-  description: "A medium size glass jar with metal lid, great for storing food or liquid and using as a cup!"
+  name: "Mason Jar",
+  price: 2,
+  image_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpPWBJmVpypqJMkVHRLNisyszvzQrYsuPAtZXtDClYwyo4IogZnVwcAtN8JlxELdTw7Sw&usqp=CAU",
+  description: "A medium size glass jar with metal lid, great for storing food or liquid and using as a cup!",
   )
