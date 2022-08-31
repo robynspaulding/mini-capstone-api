@@ -6,24 +6,21 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-Product.create(
+Product.create({
   name: "Mason Jar",
   price: 2,
-  image_url: ,
   description: "A medium size glass jar with metal lid, great for storing food or liquid and using as a cup!",
-  )
+  })
 
-  Product.create(
+  Product.create({
   name: "Coffee Mug",
   price: 5,
-  image_url: ,
   description: "White coffee mug with wide handle.",
-  )
+  })
 
 
-  Product.create(
+  Product.create({
   name: "Coaster",
   price: 1,
-  image_url: ,
   description: "square drink coaster with a photo of a waterfall.",
-  )
+  })
