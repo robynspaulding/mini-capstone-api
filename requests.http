@@ -1,0 +1,30 @@
+### Product Index Action
+GET http://localhost:3000/products.json 
+
+### Product Show Action
+GET http://localhost:3000/products/3.json 
+
+### Product Create Action
+POST http://localhost:3000/products.json 
+Content-Type: application/json
+
+{
+  "name": "test name",
+  "price": 1,
+  "image_url": "test url",
+  "description": "test description"
+}
+
+### Product Update Action
+PATCH http://localhost:3000/products/7.json 
+Content-Type: application/json
+
+{
+   "name": "test name",
+  "price": 1,
+  "image_url": "test url",
+  "description": "test description"
+}
+
+### Product Destory Action
+DELETE http://localhost:3000/products/2.json 
