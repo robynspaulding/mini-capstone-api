@@ -19,6 +19,10 @@ class Product < ApplicationRecord
     return tax + price
   end
 
+  def supplier
+    Supplier.find_by(id: supplier_id)
+  end
+
   def friendly_created_at
     created_at.strftime('%m/%d/%Y')
   end

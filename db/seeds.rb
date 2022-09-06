@@ -24,3 +24,15 @@ Product.create({
   price: 1,
   description: "square drink coaster with a photo of a waterfall.",
   })
+
+  Supplier.create({
+  name: "test supplier",
+  email: "supplier@test.com",
+  phone_number: "(555)234-5678"
+  })
+
+  Supplier.create({
+    name: "test supplier 2",
+    email: "supplier2@test.com",
+    phone_number: "(555)234-1234"
+    })

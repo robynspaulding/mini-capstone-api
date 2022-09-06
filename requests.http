@@ -29,3 +29,20 @@ Content-Type: application/json
 
 ### Product Destory Action
 DELETE http://localhost:3000/products/2.json 
+
+### supplier Index Action
+GET http://localhost:3000/suppliers.json 
+
+### supplier Show Action
+GET http://localhost:3000/suppliers/1.json 
+
+### Supplier Create Action
+POST http://localhost:3000/suppliers.json 
+Content-Type: application/json
+
+{
+  "name": "testName2",
+  "email": "test2@email.com",
+  "phone_number": "211111111"
+
+}
