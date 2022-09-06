@@ -9,10 +9,11 @@ POST http://localhost:3000/products.json
 Content-Type: application/json
 
 {
-  "name": "test name",
-  "price": 1,
-  "image_url": "test url",
-  "description": "test description"
+  "name": "testName: check for image error",
+  "price": 8,
+  "description": "this is the test-description",
+  "image_url": "test.png"
+
 }
 
 ### Product Update Action
