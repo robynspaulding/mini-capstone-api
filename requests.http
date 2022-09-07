@@ -9,7 +9,7 @@ POST http://localhost:3000/products.json
 Content-Type: application/json
 
 {
-  "name": "testName: check for image error",
+  "name": "testName",
   "price": 8,
   "description": "this is the test-description",
   "image_url": "test.png"

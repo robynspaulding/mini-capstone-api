@@ -1,9 +1,9 @@
 {
   id: @product.id,
   name: @product.name,
-  price: @product.price,
-  image_url: @product.image_url,
+  price: @product.price, 
   description: @product.description,
+  images: @product.images,
   is_discounted?: @product.is_discounted?,
   tax: @product.tax,
   total: @product.total,

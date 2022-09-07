@@ -5,7 +5,8 @@ class Product < ApplicationRecord
   validates :price, numericality: { greater_than: 0 }
   validates :description, presence: true
   validates :description, length: { in: 10..500 }
-  validates_format_of :image_url,  :with => %r{.(png|jpg|jpeg)$}i, :message => "must have valid image file type", :multiline => true 
+  belongs_to :supplier 
+  has_many :images 
   
   def is_discounted?
     return price < 10
@@ -18,13 +19,8 @@ class Product < ApplicationRecord
   def total
     return tax + price
   end
-
-  def supplier
-    Supplier.find_by(id: supplier_id)
-  end
-
+ 
   def friendly_created_at
     created_at.strftime('%m/%d/%Y')
   end
-
 end
