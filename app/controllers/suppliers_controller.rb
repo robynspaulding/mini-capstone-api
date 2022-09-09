@@ -10,7 +10,7 @@ class SuppliersController < ApplicationController
   end
 
   def show
-    @supplier = Suppliers.find_by(id: params["id"])
+    @supplier = Supplier.find_by(id: params["id"])
     render json: @supplier.as_json
   end
 

@@ -1,8 +1,10 @@
 ### Product Index Action
 GET http://localhost:3000/products.json 
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NjI4Mjc1MzR9.eBdHdG0OH8TUmQrBE2-xKwIBkQXBWUFkJfzbSLnBeog
 
 ### Product Show Action
 GET http://localhost:3000/products/1.json 
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NjI4Mjc1MzR9.eBdHdG0OH8TUmQrBE2-xKwIBkQXBWUFkJfzbSLnBeog
 
 ### Product Create Action
 POST http://localhost:3000/products.json 
@@ -46,3 +48,41 @@ Content-Type: application/json
   "phone_number": "211111111"
 
 }
+
+### Users create (signup)
+POST http://localhost:3000/users.json
+Content-Type: application/json
+
+{
+  "name": "test",
+  "email": "test@test.com",
+  "password": "password",
+  "password_confirmation": "password"
+}
+
+### Sessions create (login)
+POST http://localhost:3000/sessions.json
+Content-Type: application/json
+
+{
+  "email": "robyn@test.com",
+  "password": "password"
+}
+
+### Orders create action
+POST http://localhost:3000/orders.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjI4MjkyOTJ9.T8kB1FgvkqXxou65nZ3L614i1ShGbh_zufJP-aqUEgc
+Content-Type: application/json
+
+{
+  "product_id": 1,
+  "quantity": 1
+}
+
+### Orders show action
+GET http://localhost:3000/orders/1.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjI4MjkyOTJ9.T8kB1FgvkqXxou65nZ3L614i1ShGbh_zufJP-aqUEgc
+
+### Orders index action
+GET http://localhost:3000/orders.json 
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjI4MjkyOTJ9.T8kB1FgvkqXxou65nZ3L614i1ShGbh_zufJP-aqUEgc

@@ -1,7 +1,9 @@
 class ProductsController < ApplicationController
+  before_action :authenticate_user
 
   def index
     @products = Product.all
+    pp current_user
     render template: "products/index"
   end
 
@@ -14,7 +16,7 @@ class ProductsController < ApplicationController
     @product = Product.new(
       name: params["name"],
       price: params["price"],
-      ["description"],
+      description: params["description"],
       supplier_id: params["supplier_id"],
       inventory: params["inventory"]
     )
