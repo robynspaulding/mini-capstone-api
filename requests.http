@@ -8,6 +8,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NjI4Mjc1M
 
 ### Product Create Action
 POST http://localhost:3000/products.json 
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NjI4Mjc1MzR9.eBdHdG0OH8TUmQrBE2-xKwIBkQXBWUFkJfzbSLnBeog
 Content-Type: application/json
 
 {

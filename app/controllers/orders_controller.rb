@@ -17,7 +17,6 @@ class OrdersController < ApplicationController
     tax: calculated_tax,
     total: calculated_total
     )
-    
     @order.save
     render template: "orders/show"
   end
