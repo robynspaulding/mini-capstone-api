@@ -1,37 +1,42 @@
+@costumer = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NjI4Mjc1MzR9.eBdHdG0OH8TUmQrBE2-xKwIBkQXBWUFkJfzbSLnBeog
+@admin = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjI4MzY4NTJ9.0z_MLD2yM0P-zJQrvq-H07RbWY4ciPOuMnguh6Al3-I
+
 ### Product Index Action
 GET http://localhost:3000/products.json 
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NjI4Mjc1MzR9.eBdHdG0OH8TUmQrBE2-xKwIBkQXBWUFkJfzbSLnBeog
+Authorization: Bearer {{costumer}}
 
 ### Product Show Action
 GET http://localhost:3000/products/1.json 
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NjI4Mjc1MzR9.eBdHdG0OH8TUmQrBE2-xKwIBkQXBWUFkJfzbSLnBeog
+Authorization: Bearer {{costumer}}
 
 ### Product Create Action
 POST http://localhost:3000/products.json 
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NjI4Mjc1MzR9.eBdHdG0OH8TUmQrBE2-xKwIBkQXBWUFkJfzbSLnBeog
+Authorization: Bearer {{admin}}
 Content-Type: application/json
 
 {
-  "name": "testName",
+  "name": "test2",
   "price": 8,
   "description": "this is the test-description",
-  "image_url": "test.png"
-
+  "supplier_id": 1,
+  "inventory": 1
 }
 
 ### Product Update Action
-PATCH http://localhost:3000/products/7.json 
+PATCH http://localhost:3000/products/13.json 
+Authorization: Bearer {{admin}}
 Content-Type: application/json
 
 {
-   "name": "test name",
-  "price": 1,
-  "image_url": "test url",
-  "description": "test description"
+  "name": "Lamp",
+  "price": 25,
+  "description": "table lamp for end tables or your office desk!"
 }
 
 ### Product Destory Action
-DELETE http://localhost:3000/products/2.json 
+DELETE http://localhost:3000/products/13.json 
+Authorization: Bearer {{admin}}
+Content-Type: application/json
 
 ### supplier Index Action
 GET http://localhost:3000/suppliers.json 
@@ -72,8 +77,7 @@ Content-Type: application/json
 
 ### Orders create action
 POST http://localhost:3000/orders.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjI4MjkyOTJ9.T8kB1FgvkqXxou65nZ3L614i1ShGbh_zufJP-aqUEgc
-Content-Type: application/json
+Authorization: Bearer {{costumer}}
 
 {
   "product_id": 1,
@@ -82,8 +86,8 @@ Content-Type: application/json
 
 ### Orders show action
 GET http://localhost:3000/orders/1.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjI4MjkyOTJ9.T8kB1FgvkqXxou65nZ3L614i1ShGbh_zufJP-aqUEgc
+Authorization: Bearer {{costumer}}
 
 ### Orders index action
 GET http://localhost:3000/orders.json 
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjI4MjkyOTJ9.T8kB1FgvkqXxou65nZ3L614i1ShGbh_zufJP-aqUEgc
+Authorization: Bearer {{costumer}}

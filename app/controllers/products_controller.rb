@@ -3,7 +3,6 @@ class ProductsController < ApplicationController
 
   def index
     @products = Product.all
-    pp current_user
     render template: "products/index"
   end
 
@@ -37,7 +36,7 @@ class ProductsController < ApplicationController
 
     @product.description = params["description"] || @product.description
     @product.supplier_id = params["supplier_id"] || @product.supplier_id
-    @product.inventory = params["inventory"] || @prodult.inventory
+    @product.inventory = params["inventory"] || @product.inventory
 
     if @product.save 
       render template: "products/show"
