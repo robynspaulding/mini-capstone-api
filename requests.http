@@ -2,7 +2,7 @@
 @admin = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjI4MzY4NTJ9.0z_MLD2yM0P-zJQrvq-H07RbWY4ciPOuMnguh6Al3-I
 
 ### Product Index Action
-GET http://localhost:3000/products.json 
+GET http://localhost:3000/products.json?category=Houseware 
 Authorization: Bearer {{costumer}}
 
 ### Product Show Action
