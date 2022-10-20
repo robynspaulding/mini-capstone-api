@@ -1,4 +1,4 @@
-@costumer = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NjI4Mjc1MzR9.eBdHdG0OH8TUmQrBE2-xKwIBkQXBWUFkJfzbSLnBeog
+@costumer = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NjMxODA4ODV9.byF6JdVO958Z9yj5TKJWsRJJH_OnznfDrz63v1xgDR8
 @admin = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjI4MzY4NTJ9.0z_MLD2yM0P-zJQrvq-H07RbWY4ciPOuMnguh6Al3-I
 
 ### Product Index Action
@@ -71,7 +71,7 @@ POST http://localhost:3000/sessions.json
 Content-Type: application/json
 
 {
-  "email": "robyn@test.com",
+  "email": "test@test.com",
   "password": "password"
 }
 
@@ -91,3 +91,25 @@ Authorization: Bearer {{costumer}}
 ### Orders index action
 GET http://localhost:3000/orders.json 
 Authorization: Bearer {{costumer}}
+
+### CartedProducts Create Action
+POST http://localhost:3000/carted_products.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NjMxODA4ODV9.byF6JdVO958Z9yj5TKJWsRJJH_OnznfDrz63v1xgDR8
+Content-Type: application/json
+
+{
+ 
+  "product_id": 1,
+  "quantity": 1,
+  "status": "removed"
+
+}
+
+### CartedProducts Index Action
+GET http://localhost:3000/carted_products.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NjMxODA4ODV9.byF6JdVO958Z9yj5TKJWsRJJH_OnznfDrz63v1xgDR8
+
+### CartedProducts Destory Action
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NjMxODA4ODV9.byF6JdVO958Z9yj5TKJWsRJJH_OnznfDrz63v1xgDR8
+
+DELETE http://localhost:3000/carted_products/1.json

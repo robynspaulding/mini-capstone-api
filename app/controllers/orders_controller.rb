@@ -3,21 +3,29 @@ class OrdersController < ApplicationController
 
 
   def create
-  
-    product = Product.find_by(id: params["product_id"])
-    calculated_subtotal = product.price * params["quantity"].to_i
-    calculated_tax = product.tax * params["quantity"].to_i
-    calculated_total = calculated_subtotal + calculated_tax
+    carted_products = current_user.carted_products.where(status: "carted") 
+    
+    calculated_subtotal =  0
+    calculated_tax = 0
+    calculated_total = 0
+
+    carted_products.each do |carted_product|
+      product = carted_product.product
+      calculated_subtotal += product.price * carted_product.quantity
+      calculated_tax += product.tax * carted_product.quantity
+      calculated_total += calculated_subtotal + calculated_tax
+    end
 
     @order = Order.new(
     user_id: current_user.id,
-    product_id: params["product_id"],
-    quantity: params["quantity"],
     subtotal: calculated_subtotal,
     tax: calculated_tax,
     total: calculated_total
     )
-    @order.save
+    if @order.save
+      carted_products.update_all(status: "purchased", order_id: @order.id)
+    end
+  
     render template: "orders/show"
   end
 
